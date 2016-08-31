@@ -1,13 +1,13 @@
 "use strict"
 
-class Stack {
+class Queue {
   constructor() {
     this._value = [];
     this._max = 5;
   }
 
   peek() {
-    
+
   }
 
   isEmpty() {
@@ -32,9 +32,9 @@ class Stack {
       let temp_value = [];
       let pop_value = null;
       for(let idx = 0; idx < this._value.length-1; idx++){
-        temp_value[idx] = this._value[idx];
+        temp_value[idx] = this._value[idx + 1];
       }
-      pop_value = this._value[this._value.length-1];
+      pop_value = this._value[0];
       this._value = temp_value;
       return `Pop Value ${pop_value}`;
     }
@@ -42,21 +42,21 @@ class Stack {
   }
 }
 
-let my_stack = new Stack();
+let my_queue = new Queue();
 
-console.log(`The Stack is empty? ${my_stack.isEmpty()}`)
+console.log(`The Stack is empty? ${my_queue.isEmpty()}`)
 
-my_stack.push("Javascript")
-my_stack.push("is just so")
-my_stack.push("cool")
+my_queue.push("Javascript")
+my_queue.push("is just so")
+my_queue.push("cool")
 
-my_stack.push(15)
+my_queue.push(15)
 
-console.log(my_stack.pop());
-console.log(my_stack.pop());
-console.log(my_stack.pop());
-console.log(my_stack.pop());
+console.log(my_queue.pop());
+console.log(my_queue.pop());
+console.log(my_queue.pop());
+console.log(my_queue.pop());
 
-console.log(`The Stack is empty? ${my_stack.isEmpty()}`)
+console.log(`The Stack is empty? ${my_queue.isEmpty()}`)
 
-console.log(my_stack.pop());
+console.log(my_queue.pop());
