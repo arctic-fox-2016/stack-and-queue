@@ -2,7 +2,7 @@
 
 class Stack {
   constructor() {
-      this.tampung = new Array()
+      this.tampung = []
       this.max = 10
   }
 
@@ -36,9 +36,9 @@ class Stack {
 
   isFull()
   {
-    if(this.max.length > 10)
+    if(this.tampung.length <= 10)
     {
-      return false;
+      console.log("penuh");
     }
   }
 }
@@ -50,6 +50,26 @@ let my_stack = new Stack()
 my_stack.push("Javascript")
 my_stack.push("is just so")
 my_stack.push(15)
+
+my_stack.push("Javascript")
+my_stack.push("is just so")
+my_stack.push(15)
+
+
+my_stack.push("Javascript")
+my_stack.push("is just so")
+my_stack.push(15)
+
+
+my_stack.push("Javascript")
+my_stack.push("is just so")
+my_stack.push(15)
+
+
+my_stack.push("Javascript")
+my_stack.push("is just so")
+my_stack.push(15)
+
 my_stack.pop()
-my_stack.peek();
-console.log(my_stack.push())
+
+console.log(my_stack)
