@@ -6,10 +6,6 @@ class Stack {
     this._max = 5;
   }
 
-  peek() {
-    
-  }
-
   isEmpty() {
     if(this._value.length == 0) return true;
     return false;
@@ -18,6 +14,10 @@ class Stack {
   isFull() {
     if(this._value.length == this._max) return true;
     return false;
+  }
+
+  peek() {
+    return this._value[this._value.length];
   }
 
   push(x) {
@@ -51,7 +51,7 @@ my_stack.push("is just so")
 my_stack.push("cool")
 
 my_stack.push(15)
-
+console.log(my_stack.peek());
 console.log(my_stack.pop());
 console.log(my_stack.pop());
 console.log(my_stack.pop());

@@ -7,7 +7,7 @@ class Queue {
   }
 
   peek() {
-
+    return this._value[this._value.length];
   }
 
   isEmpty() {
